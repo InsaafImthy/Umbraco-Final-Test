@@ -1,0 +1,422 @@
+.profile-open {
+  overflow: hidden;
+}
+
+.about-introduction__grid {
+  align-items: center;
+  display: grid;
+  gap: clamp(2.5rem, 7vw, 7rem);
+  grid-template-columns: minmax(0, 1.1fr) minmax(16rem, 0.9fr);
+}
+
+.about-introduction__content:only-child {
+  grid-column: 1 / -1;
+  max-width: 58rem;
+}
+
+.about-introduction__content h2 {
+  margin-bottom: var(--space-5);
+}
+
+.about-introduction__body {
+  color: var(--color-muted);
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+}
+
+.about-introduction__media {
+  aspect-ratio: 4 / 3;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.about-introduction__media img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.about-purpose {
+  background: var(--color-navy-950);
+  color: var(--color-white);
+}
+
+.about-purpose__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-inline: 0;
+}
+
+.about-purpose__card {
+  min-height: clamp(22rem, 38vw, 34rem);
+  padding: clamp(3rem, 7vw, 7rem) var(--gutter);
+  position: relative;
+}
+
+.about-purpose__card + .about-purpose__card {
+  background: var(--color-teal-500);
+  color: var(--color-navy-950);
+}
+
+.about-purpose__number {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin-bottom: clamp(4rem, 9vw, 8rem);
+}
+
+.about-purpose h2 {
+  color: inherit;
+  margin-bottom: var(--space-5);
+}
+
+.about-purpose p {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  max-width: 32rem;
+}
+
+.ceo-message {
+  overflow: hidden;
+}
+
+.ceo-message__grid {
+  align-items: stretch;
+  display: grid;
+  gap: clamp(2rem, 6vw, 6rem);
+  grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1.22fr);
+}
+
+.ceo-message__portrait {
+  aspect-ratio: 4 / 5;
+  background: var(--color-surface-strong);
+  min-height: 28rem;
+  overflow: hidden;
+}
+
+.ceo-message__portrait img,
+.profile-card__portrait img,
+.profile-dialog__portrait-frame img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+}
+
+.ceo-message__portrait__fallback,
+.profile-card__portrait__fallback,
+.profile-dialog__portrait-frame__fallback {
+  align-items: center;
+  color: var(--color-navy-800);
+  display: flex;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  height: 100%;
+  justify-content: center;
+}
+
+.ceo-message__content {
+  align-self: center;
+  max-width: 42rem;
+}
+
+.ceo-message__content h2 {
+  margin-bottom: var(--space-6);
+}
+
+.ceo-message__quote {
+  border-inline-start: 0.25rem solid var(--color-teal-500);
+  color: var(--color-muted);
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  padding-inline-start: var(--space-5);
+}
+
+.ceo-message__signature {
+  display: grid;
+  margin-top: var(--space-6);
+}
+
+.ceo-message__signature strong {
+  color: var(--color-navy-950);
+  font-size: 1.05rem;
+}
+
+.ceo-message__signature span {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.leadership .section-heading {
+  margin-bottom: var(--space-7);
+}
+
+.leadership__tabs {
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: clamp(1rem, 4vw, 3rem);
+  justify-content: center;
+  margin-bottom: var(--space-7);
+  overflow-x: auto;
+}
+
+.leadership__tab {
+  background: transparent;
+  border: 0;
+  color: var(--color-muted);
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-weight: 800;
+  padding: 0 var(--space-2) var(--space-4);
+  position: relative;
+}
+
+.leadership__tab::after {
+  background: var(--color-teal-500);
+  bottom: -1px;
+  content: "";
+  height: 3px;
+  inset-inline-start: 0;
+  position: absolute;
+  scale: 0 1;
+  transition: scale var(--transition-base);
+  width: 100%;
+}
+
+.leadership__tab[aria-selected="true"] {
+  color: var(--color-navy-950);
+}
+
+.leadership__tab[aria-selected="true"]::after {
+  scale: 1 1;
+}
+
+.leadership__panel[hidden] {
+  display: none;
+}
+
+.leadership__grid {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+
+.profile-card {
+  background: var(--color-white);
+  min-width: 0;
+}
+
+.profile-card__trigger {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: grid;
+  height: 100%;
+  padding: 0;
+  text-align: start;
+  width: 100%;
+}
+
+.profile-card__portrait {
+  aspect-ratio: 4 / 5;
+  background: var(--color-surface-strong);
+  overflow: hidden;
+}
+
+.profile-card__portrait img {
+  transition: scale var(--transition-slow);
+}
+
+.profile-card__trigger:hover .profile-card__portrait img {
+  scale: 1.035;
+}
+
+.profile-card__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: var(--space-5);
+}
+
+.profile-card__name {
+  color: var(--color-navy-950);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.profile-card__position {
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  margin-top: var(--space-2);
+  overflow-wrap: anywhere;
+}
+
+.profile-card__action {
+  color: var(--color-navy-950);
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-top: auto;
+  padding-top: var(--space-5);
+}
+
+.profile-card__action::after {
+  color: var(--color-teal-500);
+  content: "  →";
+}
+
+.profile-dialog {
+  align-items: center;
+  background: var(--color-overlay);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: var(--gutter);
+  position: fixed;
+  z-index: calc(var(--z-skip-link) + 10);
+}
+
+.profile-dialog[hidden] {
+  display: none;
+}
+
+.profile-dialog__window {
+  background: var(--color-white);
+  box-shadow: 0 2rem 5rem rgb(0 0 0 / 25%);
+  max-height: min(52rem, calc(100dvh - (2 * var(--gutter))));
+  max-width: 66rem;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
+
+.profile-dialog__close {
+  align-items: center;
+  background: var(--color-navy-950);
+  border: 0;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.8rem;
+  height: 3rem;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  inset-inline-end: 0;
+  top: 0;
+  width: 3rem;
+  z-index: 1;
+}
+
+.profile-dialog__layout {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.72fr) minmax(0, 1.28fr);
+}
+
+.profile-dialog__portrait,
+.profile-dialog__portrait-frame {
+  background: var(--color-surface-strong);
+  min-height: 100%;
+}
+
+.profile-dialog__portrait-frame {
+  height: 100%;
+}
+
+.profile-dialog__content {
+  min-width: 0;
+  padding: clamp(2rem, 5vw, 4.5rem);
+}
+
+.profile-dialog__content h2 {
+  overflow-wrap: anywhere;
+  padding-inline-end: var(--space-6);
+}
+
+.profile-dialog__position {
+  color: var(--color-muted);
+  font-weight: 700;
+  margin-top: var(--space-3);
+}
+
+.profile-dialog__biography {
+  color: var(--color-muted);
+  margin-top: var(--space-6);
+  overflow-wrap: anywhere;
+}
+
+.profile-dialog__linkedin {
+  border-bottom: 2px solid var(--color-teal-500);
+  display: inline-block;
+  font-weight: 800;
+  margin-top: var(--space-6);
+  text-decoration: none;
+}
+
+.profile-dialog__linkedin[hidden] {
+  display: none;
+}
+
+@media (max-width: 48rem) {
+  .about-introduction__grid,
+  .ceo-message__grid,
+  .profile-dialog__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-introduction__media {
+    order: -1;
+  }
+
+  .about-purpose__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-purpose__card {
+    min-height: 22rem;
+  }
+
+  .ceo-message__portrait {
+    min-height: 0;
+  }
+
+  .leadership__tabs {
+    justify-content: flex-start;
+  }
+
+  .profile-dialog {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .profile-dialog__window {
+    max-height: 92dvh;
+  }
+
+  .profile-dialog__portrait {
+    min-height: 0;
+  }
+
+  .profile-dialog__portrait-frame {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 30rem) {
+  .leadership__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-card__content {
+    padding: var(--space-4);
+  }
+
+  .profile-card__name {
+    font-size: 0.95rem;
+  }
+
+  .profile-card__position {
+    font-size: 0.76rem;
+  }
+}

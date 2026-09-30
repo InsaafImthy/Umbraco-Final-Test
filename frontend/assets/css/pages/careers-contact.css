@@ -1,0 +1,152 @@
+.careers-content__grid {
+  align-items: center;
+  display: grid;
+  gap: clamp(2.5rem, 7vw, 7rem);
+  grid-template-columns: minmax(16rem, 0.92fr) minmax(0, 1.08fr);
+}
+
+.careers-content__copy:only-child {
+  grid-column: 1 / -1;
+  margin-inline: auto;
+  max-width: 52rem;
+  text-align: center;
+}
+
+.careers-content__copy h2 {
+  margin-bottom: var(--space-5);
+}
+
+.careers-content__body {
+  color: var(--color-muted);
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+}
+
+.careers-content__cta {
+  margin-top: var(--space-7);
+}
+
+.careers-content__media {
+  aspect-ratio: 4 / 5;
+  background:
+    radial-gradient(circle at 75% 20%, rgb(0 217 192 / 55%), transparent 24%),
+    var(--color-navy-950);
+  grid-column: 1;
+  grid-row: 1;
+  overflow: hidden;
+}
+
+.careers-content__media img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.careers-content__media + .careers-content__copy {
+  grid-column: 2;
+}
+
+.contact-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-hero__introduction {
+  color: rgb(255 255 255 / 76%);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  margin-top: var(--space-5);
+  max-width: 46rem;
+}
+
+.contact-details .section-heading {
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.contact-details__grid {
+  display: grid;
+  font-style: normal;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+
+.contact-details__item {
+  background: var(--color-surface);
+  border-top: 0.25rem solid var(--color-teal-500);
+  display: flex;
+  flex-direction: column;
+  min-height: 12rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.contact-details__label {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-details__value {
+  color: var(--color-navy-950);
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+  font-weight: 800;
+  margin-top: auto;
+  overflow-wrap: anywhere;
+  padding-top: var(--space-6);
+  text-decoration-color: var(--color-teal-500);
+  text-underline-offset: 0.25em;
+}
+
+.contact-map {
+  background: var(--color-navy-950);
+  color: var(--color-white);
+  padding-top: clamp(3rem, 6vw, 5rem);
+}
+
+.contact-map__heading {
+  align-items: end;
+  display: flex;
+  gap: var(--space-6);
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.contact-map h2 {
+  color: inherit;
+}
+
+.contact-map__link {
+  border-bottom: 2px solid var(--color-teal-500);
+  flex: 0 0 auto;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.contact-map__frame {
+  background: var(--color-surface-strong);
+  border: 0;
+  display: block;
+  height: clamp(30rem, 48vw, 43.5625rem);
+  width: 100%;
+}
+
+@media (max-width: 48rem) {
+  .careers-content__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-content__media,
+  .careers-content__media + .careers-content__copy {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .careers-content__media {
+    aspect-ratio: 16 / 11;
+  }
+
+  .contact-map__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

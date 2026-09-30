@@ -1,0 +1,78 @@
+:root {
+  /* Typography */
+  --font-display: "Rubik", "Segoe UI", Arial, sans-serif;
+  --font-body: "Rubik", "Segoe UI", Arial, sans-serif;
+  --font-arabic: "Noto Kufi Arabic", Tahoma, Arial, sans-serif;
+
+  /* Brand and interface colours */
+  --color-navy-950: #001f5b;
+  --color-navy-900: #072b68;
+  --color-navy-800: #0e2e6e;
+  --color-teal-500: #00f0cc;
+  --color-teal-300: #70f7e3;
+  --color-mint-100: #e0ffdd;
+  --color-white: #ffffff;
+  --color-ink: #001f5b;
+  --color-text: #323e48;
+  --color-muted: #767d8e;
+  --color-border: #e1e1e1;
+  --color-surface: #f9f9fc;
+  --color-surface-strong: #f1f1f1;
+  --color-error: #a12622;
+  --color-focus: #ffbf47;
+  --color-overlay: rgb(0 15 53 / 72%);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --section-space: clamp(3.75rem, 6vw, 6.25rem);
+  --gutter: clamp(1.25rem, 3.5vw, 2.5rem);
+
+  /* Layout */
+  --content-width: 71.25rem;
+  --content-narrow: 48rem;
+  --header-top-height: clamp(3.75rem, 7vh, 4.75rem);
+  --header-main-height: 5.375rem;
+  --header-total-height: calc(var(--header-top-height) + var(--header-main-height));
+  --logo-width: 11rem;
+
+  /* Shape, motion, and layering */
+  --radius-small: 0.25rem;
+  --radius-medium: 0.75rem;
+  --radius-round: 999px;
+  --transition-fast: 160ms ease;
+  --transition-base: 260ms ease;
+  --transition-slow: 480ms cubic-bezier(0.22, 1, 0.36, 1);
+  --z-header: 100;
+  --z-dropdown: 120;
+  --z-drawer: 140;
+  --z-skip-link: 200;
+}
+
+@media (max-width: 64rem) {
+  :root {
+    --header-top-height: 3.75rem;
+    --header-main-height: 5.625rem;
+    --logo-width: 10rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --header-main-height: 7.5rem;
+    --logo-width: 13rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  :root {
+    --gutter: 1rem;
+  }
+}
